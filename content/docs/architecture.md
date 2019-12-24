@@ -16,9 +16,9 @@ As shown in the above diagram, the Flipt application is made up of three main co
 
 All three of these components run side by side in a single binary. The UI and REST API are served on the same port (`8080` by default) and the GRPC Backend Service is served on `9000` by default.
 
-## Backend Service
+## Backend
 
-The Flipt Backend Service is the main entrypoint to the application and implements all of the business logic for Flipt. This is what users of the gRPC client SDKs will communicate with, allowing for fast, efficient communication with your applications.
+The Flipt Backend service is the main entrypoint to the application and implements all of the business logic for Flipt. This is what users of the gRPC client SDKs will communicate with, allowing for fast, efficient communication with your applications.
 
 ### REST API
 
