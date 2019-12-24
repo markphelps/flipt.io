@@ -4,6 +4,8 @@ languageCode = "en-us"
 title = "Flipt"
 theme = "book"
 enableGitInfo = true
+enableEmoji = true
+enableRobotsTXT = true
 
 # (Optional) Theme is intended for documentation use, therefore it doesn't render taxonomy.
 # You can remove related files with config below
