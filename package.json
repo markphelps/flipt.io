@@ -1,0 +1,8 @@
+{
+  "name": "flipt.io",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Mark Phelps <mark.aaron.phelps@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
