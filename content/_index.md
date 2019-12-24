@@ -4,7 +4,7 @@ type: docs
 bookToC: false
 ---
 
-## Flipt: A Modern Feature Flag System
+## Flipt: A Modern Feature Flag Solution
 
 {{< figure src="/img/flipt.png" class="img-main" alt="Flipt" >}}
 
