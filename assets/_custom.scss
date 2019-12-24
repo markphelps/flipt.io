@@ -3,3 +3,18 @@
   box-shadow: 0 10px 25px 0.5px rgba(0, 0, 0, 0.1);
 }
 
+.footer {
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    color: #343a40;
+    text-align: center;
+
+    :hover {
+      color: #9a9da0;
+    }
+  }
+}
