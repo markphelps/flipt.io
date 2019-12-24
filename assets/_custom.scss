@@ -3,8 +3,17 @@
   box-shadow: 0 10px 25px 0.5px rgba(0, 0, 0, 0.1);
 }
 
+.book-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.markdown {
+  flex: 1;
+}
+
 .footer {
-  margin-top: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
