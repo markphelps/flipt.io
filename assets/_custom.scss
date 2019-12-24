@@ -21,5 +21,9 @@
   a {
     color: #9a9da0;
     text-align: center;
+
+    :hover {
+      color: #343a40;
+    }
   }
 }
