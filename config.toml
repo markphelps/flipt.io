@@ -11,7 +11,10 @@ theme = "book"
 # You can remove related files with config below
 disableKinds = ['taxonomy', 'taxonomyTerm']
 
+enableGitInfo = true
+
 [params]
   BookLogo = '/img/logo.svg'
   BookMenuBundle = '/menu'
   BookToC = 1
+  BookRepo = "https://github.com/markphelps/flipt.io"
