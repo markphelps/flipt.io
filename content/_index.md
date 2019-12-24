@@ -6,7 +6,7 @@ bookToC: false
 
 ## Flipt: A Modern Feature Flag System
 
-{{< figure src="/img/flipt.png" alt="Flipt" >}}
+{{< figure src="/img/flipt.png" class="img-main" alt="Flipt" >}}
 
 Flipt is an on-prem feature flag application that allows you to run experiments across services in **your** environment.
 
