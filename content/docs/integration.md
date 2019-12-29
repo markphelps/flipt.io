@@ -77,7 +77,7 @@ flipt_pb.rb          flipt_services_pb.rb
 
 Flipt also comes equipped with a fully functional REST API. In fact, the Flipt UI is completely backed by this same API. This means that anything that can be done in the Flipt UI can also be done via the REST API.
 
-The Flipt REST API can also be used with any language that can make HTTP requests. This means that you don't need to use one of the above GRPC clients in order to integrate your application with Flipt.
+The [Flipt REST API]({{< relref "/docs/api" >}}) can also be used with any language that can make HTTP requests. This means that you don't need to use one of the above GRPC clients in order to integrate your application with Flipt.
 
 The latest version of the REST API is fully documented using OpenAPI v2 (formerly Swagger) specification.
 
