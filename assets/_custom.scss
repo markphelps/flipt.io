@@ -1,6 +1,10 @@
-.img-main {
+.main {
   margin: 2.5em auto;
   box-shadow: 0 10px 25px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+h2,h3 {
+  padding-top: .5em;
 }
 
 .book-page {
@@ -11,6 +15,12 @@
 
 .markdown {
   flex: 1;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {

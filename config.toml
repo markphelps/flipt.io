@@ -15,3 +15,6 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   BookLogo = '/img/logo.svg'
   BookMenuBundle = '/menu'
   BookToC = 1
+
+[markup.goldmark.renderer]
+unsafe= true
