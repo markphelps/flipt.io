@@ -6,12 +6,12 @@ body {
   font-weight: 300;
 }
 
-h1 { font-weight: 300; }
+h1 { font-weight: 400; }
 
-h2, h3 { font-weight: 400; }
+h2, h3 { font-weight: 300; }
 
 header {
-  background-image: linear-gradient(320deg, #A27EDE 0%, #6A35BF 100%);
+  background-image: linear-gradient(30deg, #A27EDE 20%, #6A35BF 80%);
   color: white;
   overflow: hidden;
 }
@@ -148,7 +148,7 @@ main {
 
 .flex section p {
   padding-left: 40px;
-  color: #888;
+  color: #333;
   font-size: 12pt;
   margin: 0;
 }
