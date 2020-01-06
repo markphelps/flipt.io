@@ -153,9 +153,20 @@ main {
   margin: 0;
 }
 
+#enterprise {
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.formkit-form {
+  margin: auto;
+}
+
 footer {
   max-width: 700px;
-  margin: 100px auto 10px auto;
+  padding: 5px;
+  margin: 10px auto;
   font-size: 10pt;
   opacity: .5;
   text-align: center;
