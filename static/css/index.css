@@ -43,13 +43,13 @@ header {
 #title #logo h1 {
   font-family: 'Fira Sans', sans-serif;
   margin: 0 auto 30px;
-  font-size: 70px;
+  font-size: 55pt;
 }
 
 #title h2 {
   font-family: 'Fira Sans', sans-serif;
   margin: 5px auto 50px auto;
-  font-size: 30px;
+  font-size: 20pt;
 }
 
 #title {
@@ -205,5 +205,9 @@ footer #heart {
 
   header #title br {
     display: none;
+  }
+
+  #title h2 {
+    font-size: 16pt;
   }
 }
