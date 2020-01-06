@@ -1,8 +1,8 @@
 # Getting Started
 
-This document describes how to get started with the Flipt UI.
+This document describes how to get started with Flipt.
 
-Once you have your application integrated with the Flipt backend, it's time to create some flags to evaluate. This documentation will walk you through creating your first flag, segment, set of rules and finally using the debug console to evaluate everything.
+Once you have your application integrated with the Flipt backend, it's time to create some flags to evaluate. This document will walk you through creating your first flag, segment, set of rules and finally using the debug console to evaluate everything.
 
 For more information on any of the concepts described here, please see the [Concepts]({{< relref "/docs/concepts" >}}) documentation.
 
@@ -14,7 +14,7 @@ In this example we'll use the default location of [http://localhost:8080](http:/
 
 ## Flags and Variants
 
-Now we'll create a flag and variants that we will use to evaluate against.
+First we'll create a flag and variants that we will use to evaluate against.
 
 ### Create a Flag
 
