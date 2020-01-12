@@ -179,7 +179,7 @@ main {
   float: left;
   left: 0;
   display: block;
-  margin: 0px auto 4px auto;
+  opacity: 0.5;
 }
 
 #enterprise-features section {
@@ -189,7 +189,7 @@ main {
 }
 
 #enterprise-features section h3 {
-  margin: 0 auto 0 40px;
+  margin: 0 auto 0 30px;
   font-size: 14pt;
   margin-bottom: .5em;
   font-weight: 300;
