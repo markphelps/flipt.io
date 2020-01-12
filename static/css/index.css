@@ -4,6 +4,7 @@ body {
   background-color: #f7f8f9;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
+  color: #333;
 }
 
 h1 { font-weight: 400; }
@@ -107,29 +108,29 @@ main {
   padding: 50px 0 0 0;
 }
 
-.flex {
+#features {
   display: flex;
   margin: 0 auto;
   max-width: 920px;
   flex-wrap: wrap;
-  padding: 20px 20px;
+  padding: 40px 0;
   justify-content: space-between;
 }
 
-.flex section {
+#features section {
   margin-top: 40px;
   width: 32%;
 }
 
-.flex section:first-child {
+#features section:first-child {
   margin-left: 0px;
 }
 
-.flex section:last-child {
+#features section:last-child {
   margin-right: 0px;
 }
 
-.flex section i {
+#features section i {
   float: left;
   left: 0;
   display: block;
@@ -137,7 +138,7 @@ main {
   color: #333;
 }
 
-.flex section h3 {
+#features section h3 {
   margin-top: 0;
   font-size: 14pt;
   color: #6A35BF;
@@ -146,7 +147,7 @@ main {
   margin-left: 40px;
 }
 
-.flex section p {
+#features section p {
   padding-left: 40px;
   color: #333;
   font-size: 12pt;
@@ -154,9 +155,48 @@ main {
 }
 
 #enterprise {
+  background-color: #6A35BF;
+  color: #f7f8f9;
+  padding: 40px;
+}
+
+#enterprise h2 {
   margin: auto;
   text-align: center;
-  padding: 50px 0;
+  margin-bottom: .5em;
+}
+
+#enterprise-features {
+  display: flex;
+  margin: auto;
+  max-width: 500px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+#enterprise-features section i {
+  float: left;
+  left: 0;
+  display: block;
+  margin: 0px auto 4px auto;
+}
+
+#enterprise-features section {
+  padding: 10px 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+#enterprise-features section h3 {
+  margin: 0 auto 0 40px;
+  font-size: 14pt;
+  margin-bottom: .5em;
+  font-weight: 300;
+}
+
+#enterprise-signup {
+  margin-top: 60px;
 }
 
 .formkit-form {
@@ -164,12 +204,16 @@ main {
 }
 
 footer {
-  max-width: 700px;
-  padding: 5px;
-  margin: 10px auto;
+  width: 100%;
   font-size: 10pt;
-  opacity: .5;
+  padding-bottom: 5px;
   text-align: center;
+  background-color: #6A35BF;
+  color: white;
+}
+
+footer a {
+  color: white;
 }
 
 footer #heart {
@@ -183,19 +227,26 @@ footer #heart {
 }
 
 @media screen and (max-width: 680px) {
-  .flex {
+  #features {
+    padding: 20px;
     display: block;
-    padding: 0;
   }
 
-  .flex section {
+  #features section {
+    width: 100%;
+  }
+
+  #enterprise-features {
+    display: block;
+  }
+
+  #enterprise-features section {
     width: 100%;
   }
 
   main {
-    padding: 20px;
     margin: 0;
-    width: calc(100% - 40px);
+    padding-top: 20px;
   }
 
   nav a {
