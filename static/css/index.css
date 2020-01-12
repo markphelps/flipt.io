@@ -110,7 +110,7 @@ main {
 
 #features {
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   max-width: 920px;
   flex-wrap: wrap;
   padding: 40px 0;
