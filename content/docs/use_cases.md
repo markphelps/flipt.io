@@ -14,7 +14,7 @@ Next, choose your percentages like so:
 
 {{< figure src="/img/use_cases/flag_targeting_rollout.png" alt="Flag Targeting" >}}
 
-Now that your A/B testing flag is all set up you can begin to make requests! Using your favoring Flipt gRPC client library, you can call the `Evaluate` method with the request parameters.
+Now that your A/B testing flag is all set up you can begin to make requests! Using your favorite Flipt gRPC client library, you can call the `Evaluate` method with the request parameters.
 
 *Language: Go*
 ```go
@@ -25,7 +25,7 @@ res, err := client.Evaluate(context.Background(), &flipt.EvaluationRequest{
 ```
 
 {{< hint info >}}
-Notice that we are using an email address for the `EntityId`. This does not need to be an email address, it just needs to be a unique identifier for users.
+Notice that we are using an email address for the `EntityId`. This does not need to be an email address, it just needs to be a unique identifier for your users.
 {{< /hint >}}
 
 One of the fields in the reulting struct is `Value`. You can check this to determine what landing page to respond with:
