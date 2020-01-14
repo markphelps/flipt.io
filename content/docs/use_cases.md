@@ -1,34 +1,55 @@
 # Use Cases
 
-Flipt provides a solution for **feature flagging**. The next few sections provide examples of how Flipt can be used.
+In this section we will explore two of the most common use cases that Flipt is used for: **feature flagging** and **A/B testing**.
+
+## Feature Flagging
+
+Feature flagging can be used to switch features on and off. This can be done by toggling a flag within Flipt.
+
+Once you have a flag created, you can control whether or not a feature is enabled within your application by toggling the `enable` slider in the Flipt UI.
+
+{{< figure src="/img/use_cases/flag_enable_slider.png" alt="Flag Enable Slider" >}}
+
+An example request to evaluate whether or not this flag is enabled would look like this:
+
+*Language: Go*
+```go
+res, err := client.GetFlag(context.Background(), &flipt.GetFlagRequest{
+	Key: "test-flag",
+})
+```
+
+The response will contain a field `Enabled`, which could be used like this:
+
+```go
+if res.Enabled {
+	// Code for your feature
+}
+```
 
 ## A/B Testing
 
-A/B testing can be accomplished by setting up a percentage rollout in Flipt. First you will need to create a segment. This is detailed in [Getting Started]({{< relref "/docs/getting_started" >}}). You can simply create a segment with no constraints, which will match all users.
+A/B testing can be accomplished by setting up a percentage rollout rule in Flipt. See the [Getting Started]({{< relref "/docs/getting_started" >}}) to learn how to accomplish this.
 
-Next you will want to create a flag with some variants by going to **Flags -> New Flag**. For this example I have created two variants: group-a and group-b.
-
-After you have both your segment and flag created, head on over to the **Targeting** tab in the flag that you just made. Then select **New Rule**. From here you can match on your newly created segment and choose **A Percentage Rollout** from the dropdown.
-
-Next, choose your percentages like so:
+In this example rule, we have two variants that we are targeting, `group-a` and `group-b`, each with a 50% distribution.
 
 {{< figure src="/img/use_cases/flag_targeting_rollout.png" alt="Flag Targeting" >}}
 
-Now that your A/B testing flag is all set up you can begin to make requests! Using your favorite Flipt gRPC client library, you can call the `Evaluate` method with the request parameters.
+An example request to evaluate this rule within your application would look like this:
 
 *Language: Go*
 ```go
 res, err := client.Evaluate(context.Background(), &flipt.EvaluationRequest{
-		FlagKey:  "new-landing-page",
-		EntityId: "test@email.com",
-	})
+	FlagKey:  "new-landing-page",
+	EntityId: "test@email.com",
+})
 ```
 
 {{< hint info >}}
 Notice that we are using an email address for the `EntityId`. This does not need to be an email address, it just needs to be a unique identifier for your users.
 {{< /hint >}}
 
-One of the fields in the reulting struct is `Value`. You can check this to determine what landing page to respond with:
+The response will contain which variant we should show for this user, either `group-a` or `group-b`:
 
 ```go
 if res.Value == "group-a" {
