@@ -3,7 +3,6 @@ baseURL = "https://flipt.io/"
 languageCode = "en-us"
 title = "Flipt"
 theme = "book"
-enableGitInfo = true
 enableEmoji = true
 enableRobotsTXT = true
 
@@ -12,9 +11,14 @@ enableRobotsTXT = true
 disableKinds = ['taxonomy', 'taxonomyTerm']
 
 [params]
-  BookLogo = '/img/logo.svg'
   BookMenuBundle = '/menu'
-  BookToC = 1
+  BookLogo = '/img/logo.svg'
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  BookRepo = 'https://github.com/markphelps/flipt.io'
 
-[markup.goldmark.renderer]
-unsafe= true
+  # Enable 'Edit this page' links for 'doc' page type.
+  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+  # Path must point to 'content' directory of repo.
+  BookEditPath = 'edit/master/content'
+  BookToC = 1
