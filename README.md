@@ -6,4 +6,4 @@
 
 1. Clone this repo
 1. Install [hugo](https://gohugo.io/getting-started/quick-start/)
-1. Run `hugo serve -w` in the cloned path
+1. Run `make`

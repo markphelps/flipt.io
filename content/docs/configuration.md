@@ -16,24 +16,25 @@ These defaults are commented out in `default.yml` to give you an idea of what th
 
 These properties are as follows:
 
-| Property | Description | Default |
-|---|---|---|
-| log.level | Level at which messages are logged (trace, debug, info, warn, error, fatal, panic) | info |
-| log.file | File to log to instead of STDOUT | |
-| ui.enabled | Enable UI and API docs | true |
-| cors.enabled | Enable CORS support | false |
-| cors.allowed_origins | Sets Access-Control-Allow-Origin header on server | "*" (all domains) |
-| cache.memory.enabled | Enable in-memory caching | false |
-| cache.memory.items | Number of items in-memory cache can hold | 500 |
-| server.protocol | `http` or `https` | http |
-| server.host | The host address on which to serve the Flipt application | 0.0.0.0 |
-| server.http_port | The HTTP port on which to serve the Flipt REST API and UI | 8080 |
-| server.https_port | The HTTPS port on which to serve the Flipt REST API and UI | 443 |
-| server.grpc_port | The port on which to serve the Flipt GRPC server | 9000 |
-| server.cert_file | Path to the certificate file (if protocol is set to `https`) | |
-| server.cert_key | Path to the certificate key file (if protocol is set to `https`) | |
-| db.url | URL to access Flipt database | file:/var/opt/flipt/flipt.db |
-| db.migrations.path | Where the Flipt database migration files are kept | /etc/flipt/config/migrations |
+| Property                       | Description                                                                        | Default                      | Since   |
+|--------------------------------|------------------------------------------------------------------------------------|------------------------------|---------|
+| log.level                      | Level at which messages are logged (trace, debug, info, warn, error, fatal, panic) | info                         |         |
+| log.file                       | File to log to instead of STDOUT                                                   |                              | v0.10.0 |
+| ui.enabled                     | Enable UI and API docs                                                             | true                         |         |
+| cors.enabled                   | Enable CORS support                                                                | false                        | v0.7.0  |
+| cors.allowed_origins           | Sets Access-Control-Allow-Origin header on server                                  | "*" (all domains)            | v0.7.0  |
+| cache.memory.enabled           | Enable in-memory caching                                                           | false                        |         |
+| cache.memory.expiration        | Duration at which cache items are considered expired                               | -1 (none)                    | v0.12.0 |
+| cache.memory.eviction_interval | Interval at which expired items are evicted from the cache                         | 10m (10 minutes)             | v0.12.0 |
+| server.protocol                | `http` or `https`                                                                  | http                         | v0.8.0  |
+| server.host                    | The host address on which to serve the Flipt application                           | 0.0.0.0                      |         |
+| server.http_port               | The HTTP port on which to serve the Flipt REST API and UI                          | 8080                         |         |
+| server.https_port              | The HTTPS port on which to serve the Flipt REST API and UI                         | 443                          | v0.8.0  |
+| server.grpc_port               | The port on which to serve the Flipt GRPC server                                   | 9000                         |         |
+| server.cert_file               | Path to the certificate file (if protocol is set to `https`)                       |                              | v0.8.0  |
+| server.cert_key                | Path to the certificate key file (if protocol is set to `https`)                   |                              | v0.8.0  |
+| db.url                         | URL to access Flipt database                                                       | file:/var/opt/flipt/flipt.db |         |
+| db.migrations.path             | Where the Flipt database migration files are kept                                  | /etc/flipt/config/migrations |         |
 
 ## Environment Variables
 
@@ -115,9 +116,18 @@ docker run -it markphelps/flipt:latest /bin/sh -c './flipt migrate'
 
 ## Caching
 
-### In-Memory
+Flipt supports an in-memory cache to enable faster reads and evaluations. Enabling in-memory cache has been shown to speed up read performance by several orders of magnitude.
 
-In-memory caching is currently only available for flags. When enabled, in-memory caching has been shown to speed up the fetching of individual flags by 10x.
+{{< hint danger >}}
+Enabling in-memory caching when running more that one instance of Flipt is not advised as it will lead to unpredictable results.
+{{< /hint >}}
+
+Caching works as follows:
+
+* All reads go through the cache
+* All writes flush the **entire cache** to ensure the cache is kept up to date
+* A cache miss will fetch the item from the database and add the item to the cache for the next read
+* A cache hit will simply return the item from the cache, not interacting with the database
 
 To enable caching set the following in your config:
 
@@ -127,11 +137,27 @@ cache:
     enabled: true
 ```
 
-Work is planned to add caching support to rule evaluation soon.
+### Expiration/Eviction
 
-{{< hint danger >}}
-Enabling in-memory caching when running more that one instance of Flipt is not advised as it will lead to unpredictable results.
+You can also configure an optional duration at which items in the cache are marked as expired.
+
+For example, if you set the cache expiration to `5m`, items that have been in the cache for longer than 5 minutes will be marked as expired, meaning the next read for that item will hit the database.
+
+Setting an eviction interval will automatically remove expired items from your cache at a defined period.
+
+{{< hint info >}}
+The combination of cache expiration and eviction can help lessen the amount of memory your cache uses, as infrequently accessed items will be removed over time.
 {{< /hint >}}
+
+To tune the expiration and eviction interval of the cache set the following in your config:
+
+```yaml
+cache:
+  memory:
+    enabled: true
+    expiration: 5m # items older than 5 minutes will be marked as expired
+    eviction_interval: 2m # expired items will be evicted from the cache every 2 minutes
+```
 
 ## Metrics
 
@@ -153,8 +179,10 @@ go_gc_duration_seconds_count 5
 ...
 ```
 
+There is an [example](https://github.com/markphelps/flipt/tree/master/examples/prometheus) provided in the GitHub repository showing how to setup Flipt with Prometheus.
+
 ## Authentication
 
-There is currently no built in authentication, authorization or encryption as Flipt was designed to work inside your trusted architecture and not be exposed publicly.
+There is currently no built in authentication, authorization or encryption as Flipt was designed to work inside your trusted architecture and not be exposed publicly. If you wish to expose the Flipt dashboard and REST API publicly using HTTP Basic Authentication, you can do so by using a reverse proxy.
 
-If you do wish to expose the Flipt dashboard and REST API publicly using HTTP Basic Authentication, you can do so by using a reverse proxy. There is an [example](https://github.com/markphelps/flipt/tree/master/examples/auth) provided in the GitHub repository showing how this could work.
+There is an [example](https://github.com/markphelps/flipt/tree/master/examples/auth) provided in the GitHub repository showing how this can work.
