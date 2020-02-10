@@ -119,7 +119,7 @@ docker run -it markphelps/flipt:latest /bin/sh -c './flipt migrate'
 Flipt supports an in-memory cache to enable faster reads and evaluations. Enabling in-memory cache has been shown to speed up read performance by several orders of magnitude.
 
 {{< hint danger >}}
-Enabling in-memory caching when running more that one instance of Flipt is not advised as it will lead to unpredictable results.
+Enabling in-memory caching when running more that one instance of Flipt is not advised as it may lead to unpredictable results.
 {{< /hint >}}
 
 Caching works as follows:
