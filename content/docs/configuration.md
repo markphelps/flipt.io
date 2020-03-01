@@ -88,11 +88,11 @@ db:
   url: postgres://postgres@localhost:5432/flipt?sslmode=disable
 ```
 
-{{< hint warning >}}
+{{< hint info >}}
 The Postgres database must exist and be up and running before Flipt will be able to connect to it.
 {{< /hint >}}
 
-## Migrations
+### Migrations
 
 From time to time the Flipt database must be updated with new schema. To accomplish this, Flipt includes a `migrate` command that will run any pending database migrations for you.
 
@@ -114,11 +114,58 @@ If running Flipt via Docker, you can run the migrations in a separate container 
 docker run -it markphelps/flipt:latest /bin/sh -c './flipt migrate'
 ```
 
+## Import/Export
+
+Flipt supports importing and exporting your feature flag data since [v0.13.0](https://github.com/markphelps/flipt/releases/tag/v0.13.0).
+
+### Import
+
+To import previously exported Flipt data, use the `flipt import` command.
+
+This command requires the file to be imported as an argument:
+
+```bash
+flipt import flipt.yaml
+```
+
+This command supports the `--drop` flag that will drop all of the data in your Flipt database tables before importing. This is to ensure that no data collisions occur during the import.
+
+{{< hint danger >}}
+Be careful when using the `--drop` flag as it will immediately drop all of your data and there is no undo. It is recommend to first backup you database before running this command just to be safe.
+{{< /hint >}}
+
+### Export
+
+To export Flipt data, use the `flipt export` command.
+
+By default, `export` will output to STDOUT:
+
+```bash
+$ flipt export
+
+flags:
+- key: new-contact-page
+  name: New Contact Page
+  description: Show users our Beta contact page
+  enabled: true
+  variants:
+  - key: blue
+    name: Blue
+  - key: green
+    name: Green
+```
+
+You can also export to a file using the `-o filename` or `--output filename` flags:
+
+```bash
+flipt export -o flipt.yaml
+```
+
 ## Caching
 
 Flipt supports an in-memory cache to enable faster reads and evaluations. Enabling in-memory cache has been shown to speed up read performance by several orders of magnitude.
 
-{{< hint danger >}}
+{{< hint warning >}}
 Enabling in-memory caching when running more that one instance of Flipt is not advised as it may lead to unpredictable results.
 {{< /hint >}}
 
