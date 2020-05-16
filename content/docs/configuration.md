@@ -120,9 +120,15 @@ Flipt supports importing and exporting your feature flag data since [v0.13.0](ht
 
 ### Import
 
-To import previously exported Flipt data, use the `flipt import` command.
+To import previously exported Flipt data, use the `flipt import` command. You can import either from a file or from STDIN.
 
-This command requires the file to be imported as an argument:
+To import from STDIN, Flipt requires the `--stdin` flag:
+
+```bash
+cat flipt.yaml | flipt import --stdin
+```
+
+If not importing using `--stdin`, Flipt requires the file to be imported as an argument:
 
 ```bash
 flipt import flipt.yaml
