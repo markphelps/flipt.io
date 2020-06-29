@@ -67,9 +67,9 @@ export FLIPT_DB_URL="postgres://postgres@localhost:5432/flipt?sslmode=disable"
 
 ## Databases
 
-Flipt supports both [SQLite](https://www.sqlite.org/index.html) and [Postgres](https://www.postgresql.org/) databases as of `v0.5.0`.
+Flipt supports [SQLite](https://www.sqlite.org/index.html), [Postgres](https://www.postgresql.org/) and [MySQL](https://dev.mysql.com/) databases as of `v0.16.0`.
 
-SQLite is enabled by default for simplicity, however you should use Postgres if you intend to run multiple copies of Flipt in a high availability configuration.
+SQLite is enabled by default for simplicity, however you should use Postgres or MySQL if you intend to run multiple copies of Flipt in a high availability configuration.
 
 The database connection can be configured as follows:
 
@@ -90,6 +90,17 @@ db:
 
 {{< hint info >}}
 The Postgres database must exist and be up and running before Flipt will be able to connect to it.
+{{< /hint >}}
+
+### MySQL
+
+```yaml
+db:
+  url: mysql://mysql@localhost:3306/flipt
+```
+
+{{< hint info >}}
+The MySQL database must exist and be up and running before Flipt will be able to connect to it.
 {{< /hint >}}
 
 ### Migrations
