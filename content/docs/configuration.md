@@ -256,6 +256,8 @@ There is an [example](https://github.com/markphelps/flipt/tree/master/examples/p
 
 Flipt supports distributed tracing via the [OpenTracing](https://opentracing.io/) protocol and [Jaeger](https://www.jaegertracing.io/) library. Enable tracing via the configuration values described above and point Flipt to your Jaeger host to record spans.
 
+There is an [example](https://github.com/markphelps/flipt/tree/master/examples/tracing) provided in the GitHub repository showing how to setup Flipt with Jaeger.
+
 ## Authentication
 
 There is currently no built in authentication, authorization or encryption as Flipt was designed to work inside your trusted architecture and not be exposed publicly. If you wish to expose the Flipt dashboard and REST API publicly using HTTP Basic Authentication, you can do so by using a reverse proxy.
