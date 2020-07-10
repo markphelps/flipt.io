@@ -4,37 +4,44 @@ There are two ways to configure Flipt: using a configuration file or through env
 
 ## Configuration File
 
-The default way that Flipt is configured is with the use of a configuration file `default.yml`.
+The default way that Flipt is configured is with the use of a configuration file [default.yml](https://github.com/markphelps/flipt/blob/master/config/default.yml).
 
 This file is read when Flipt starts up and configures several important properties for the server.
 
 You can edit any of these properties to your liking, and on restart Flipt will pick up the new changes.
 
 {{< hint info >}}
-These defaults are commented out in `default.yml` to give you an idea of what they are. To change them you'll first need to uncomment them.
+These defaults are commented out in [default.yml](https://github.com/markphelps/flipt/blob/master/config/default.yml) to give you an idea of what they are. To change them you'll first need to uncomment them.
 {{< /hint >}}
 
 These properties are as follows:
 
-| Property                       | Description                                                                        | Default                      | Since   |
-|--------------------------------|------------------------------------------------------------------------------------|------------------------------|---------|
-| log.level                      | Level at which messages are logged (trace, debug, info, warn, error, fatal, panic) | info                         |         |
-| log.file                       | File to log to instead of STDOUT                                                   |                              | v0.10.0 |
-| ui.enabled                     | Enable UI and API docs                                                             | true                         |         |
-| cors.enabled                   | Enable CORS support                                                                | false                        | v0.7.0  |
-| cors.allowed_origins           | Sets Access-Control-Allow-Origin header on server                                  | "*" (all domains)            | v0.7.0  |
-| cache.memory.enabled           | Enable in-memory caching                                                           | false                        |         |
-| cache.memory.expiration        | Duration at which cache items are considered expired                               | -1 (none)                    | v0.12.0 |
-| cache.memory.eviction_interval | Interval at which expired items are evicted from the cache                         | 10m (10 minutes)             | v0.12.0 |
-| server.protocol                | `http` or `https`                                                                  | http                         | v0.8.0  |
-| server.host                    | The host address on which to serve the Flipt application                           | 0.0.0.0                      |         |
-| server.http_port               | The HTTP port on which to serve the Flipt REST API and UI                          | 8080                         |         |
-| server.https_port              | The HTTPS port on which to serve the Flipt REST API and UI                         | 443                          | v0.8.0  |
-| server.grpc_port               | The port on which to serve the Flipt GRPC server                                   | 9000                         |         |
-| server.cert_file               | Path to the certificate file (if protocol is set to `https`)                       |                              | v0.8.0  |
-| server.cert_key                | Path to the certificate key file (if protocol is set to `https`)                   |                              | v0.8.0  |
-| db.url                         | URL to access Flipt database                                                       | file:/var/opt/flipt/flipt.db |         |
-| db.migrations.path             | Where the Flipt database migration files are kept                                  | /etc/flipt/config/migrations |         |
+| Property                         | Description                                                                        | Default                      | Since   |
+|----------------------------------|------------------------------------------------------------------------------------|------------------------------|---------|
+| `log.level`                      | Level at which messages are logged (trace, debug, info, warn, error, fatal, panic) | info                         |         |
+| `log.file`                       | File to log to instead of STDOUT                                                   |                              | v0.10.0 |
+| `ui.enabled`                     | Enable UI and API docs                                                             | true                         |         |
+| `cors.enabled`                   | Enable CORS support                                                                | false                        | v0.7.0  |
+| `cors.allowed_origins`           | Sets Access-Control-Allow-Origin header on server                                  | "*" (all domains)            | v0.7.0  |
+| `cache.memory.enabled`           | Enable in-memory caching                                                           | false                        |         |
+| `cache.memory.expiration`        | Duration at which cache items are considered expired                               | -1 (none)                    | v0.12.0 |
+| `cache.memory.eviction_interval` | Interval at which expired items are evicted from the cache                         | 10m (10 minutes)             | v0.12.0 |
+| `server.protocol`                | `http` or `https`                                                                  | http                         | v0.8.0  |
+| `server.host`                    | The host address on which to serve the Flipt application                           | 0.0.0.0                      |         |
+| `server.http_port`               | The HTTP port on which to serve the Flipt REST API and UI                          | 8080                         |         |
+| `server.https_port`              | The HTTPS port on which to serve the Flipt REST API and UI                         | 443                          | v0.8.0  |
+| `server.grpc_port`               | The port on which to serve the Flipt GRPC server                                   | 9000                         |         |
+| `server.cert_file`               | Path to the certificate file (if protocol is set to `https`)                       |                              | v0.8.0  |
+| `server.cert_key`                | Path to the certificate key file (if protocol is set to `https`)                   |                              | v0.8.0  |
+| `db.url`                         | URL to access Flipt database                                                       | file:/var/opt/flipt/flipt.db |         |
+| `db.max_idle_conn`               | The maximum number of connections in the idle connection pool                      | 2                            | v0.17.0 |
+| `db.max_open_conn`               | The maximum number of open connections to the database                             | unlimited                    | v0.17.0 |
+| `db.conn_max_lifetime`           | Sets the maximum amount of time in which a connection can be reused                | unlimited                    | v0.17.0 |
+| `db.migrations.path`             | Where the Flipt database migration files are kept                                  | /etc/flipt/config/migrations |         |
+| `tracing.jaeger.enabled`         | Enable tracing support with Jaeger                                                 | false                        | v0.17.0 |
+| `tracing.jaeger.host`            | The UDP host destination to report spans                                           | localhost                    | v0.17.0 |
+| `tracing.jaeger.port`            | The UDP port destination to report spans                                           | 6831                         | v0.17.0 |
+| `meta.check_for_updates`         | Enable check for newer versions of Flipt on startup                                | true                         | v0.17.0 |
 
 ## Environment Variables
 
@@ -244,6 +251,10 @@ go_gc_duration_seconds_count 5
 ```
 
 There is an [example](https://github.com/markphelps/flipt/tree/master/examples/prometheus) provided in the GitHub repository showing how to setup Flipt with Prometheus.
+
+## Tracing
+
+Flipt supports distributed tracing via the [OpenTracing](https://opentracing.io/) protocol and [Jaeger](https://www.jaegertracing.io/) library. Enable tracing via the configuration values described above and point Flipt to your Jaeger host to record spans.
 
 ## Authentication
 
