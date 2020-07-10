@@ -4,14 +4,14 @@ There are two ways to configure Flipt: using a configuration file or through env
 
 ## Configuration File
 
-The default way that Flipt is configured is with the use of a configuration file `default.yml`.
+The default way that Flipt is configured is with the use of a configuration file [default.yml](https://github.com/markphelps/flipt/blob/master/config/default.yml).
 
 This file is read when Flipt starts up and configures several important properties for the server.
 
 You can edit any of these properties to your liking, and on restart Flipt will pick up the new changes.
 
 {{< hint info >}}
-These defaults are commented out in `default.yml` to give you an idea of what they are. To change them you'll first need to uncomment them.
+These defaults are commented out in [default.yml](https://github.com/markphelps/flipt/blob/master/config/default.yml) to give you an idea of what they are. To change them you'll first need to uncomment them.
 {{< /hint >}}
 
 These properties are as follows:
