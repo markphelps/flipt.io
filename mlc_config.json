@@ -1,10 +1,7 @@
 {
 	"ignorePatterns": [
 		{
-            "pattern": "^http(s)*:\/\/localhost.*"
-        },
-        {
-            "pattern": "^http(s)*:\/\/0\.0\.0\.0.*"
-        }
+		    "pattern": "^http(s)*:\/\/localhost.*"
+		}
 	]
 }
