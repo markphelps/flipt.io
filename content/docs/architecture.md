@@ -45,7 +45,7 @@ Flipt is built using several amazing open source technologies including:
 * [gRPC Gateway](https://github.com/grpc-ecosystem/grpc-gateway/)
 * [Vue.js](https://vuejs.org/)
 * [Bulma](https://bulma.io/)
-* [Buefy](https://buefy.github.io/)
+* [Buefy](https://buefy.org/documentation/)
 
 A brief description of why each technology was chosen is below.
 
@@ -87,4 +87,4 @@ The Flipt UI is a Single Page Application (SPA) written in JavaScript using Vue.
 
 ### Buefy
 
-[Buefy](https://buefy.github.io/) creates lightweight UI components for Vue.js based on Bulma. The Flipt UI was built using several Buefy components that greatly enhanced the speed of development.
+[Buefy](https://buefy.org/documentation/) creates lightweight UI components for Vue.js based on Bulma. The Flipt UI was built using several Buefy components that greatly enhanced the speed of development.
