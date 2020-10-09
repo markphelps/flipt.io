@@ -113,4 +113,5 @@ Client libraries built by awesome people from the Open Source community:
 | Library | Language | Author | Desc |
 | --- | --- | --- | --- |
 | [flipt-grpc-python](https://github.com/getsentry/flipt-grpc-python) | Python | [@getsentry](https://github.com/getsentry) | Python GRPC bindings for Flipt |
+| [Flipt-iOS-SDK](https://github.com/Camji55/Flipt-iOS-SDK) | Swift | [@Camji55](https://github.com/Camji55) | Native iOS SDK for Flipt |
 | [rflipt](https://github.com/christopherdiehl/rflipt) | React | [@christopherdiehl](https://github.com/christopherdiehl) | Components/example project to control React features backed by Flipt |
