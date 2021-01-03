@@ -93,13 +93,31 @@ nav a.cta {
   padding: 0px 30pt;
   white-space: nowrap;
   transition: all .1s ease;
-  font-weight: 600;
   text-decoration: none;
 }
 
 nav a.cta:hover {
   text-decoration: none;
   background-image: linear-gradient(259deg, #6A35BF 0%, #A365E1 100%);
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
+  color: #f7f8f9;
+}
+
+nav a.cta-enterprise {
+  display: inline-block;
+  color: white;
+  background-image: linear-gradient(259deg, #A829BA 0%, #CF75DC 100%);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 50px;
+  padding: 0px 30pt;
+  white-space: nowrap;
+  transition: all .1s ease;
+  text-decoration: none;
+}
+
+nav a.cta-enterprise:hover {
+  text-decoration: none;
+  background-image: linear-gradient(259deg, #A829BA 0%, #CF75DC 100%);
   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
   color: #f7f8f9;
 }
