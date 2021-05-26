@@ -114,3 +114,4 @@ Client libraries built by awesome people from the Open Source community:
 | --- | --- | --- | --- |
 | [flipt-grpc-python](https://github.com/getsentry/flipt-grpc-python) | Python | [@getsentry](https://github.com/getsentry) | Python GRPC bindings for Flipt |
 | [rflipt](https://github.com/christopherdiehl/rflipt) | React | [@christopherdiehl](https://github.com/christopherdiehl) | Components/example project to control React features backed by Flipt |
+| [flipt-php](https://github.com/fetzi/flipt-php) | PHP | [@fetzi](https://github.com/fetzi) | Package for evaluating feature flags via the Flipt REST API using [HTTPlug](http://httplug.io/) |
