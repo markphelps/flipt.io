@@ -213,7 +213,7 @@ flipt export -o flipt.yaml
 Flipt supports an in-memory cache to enable faster reads and evaluations. Enabling in-memory cache has been shown to speed up read performance by several orders of magnitude.
 
 {{< hint warning >}}
-Enabling in-memory caching when running more that one instance of Flipt is not advised as it may lead to unpredictable results.
+Enabling in-memory caching when running more than one instance of Flipt is not advised as it may lead to unpredictable results.
 {{< /hint >}}
 
 Caching works as follows:
