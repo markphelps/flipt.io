@@ -16,6 +16,8 @@ Flags can be used as simple on/off toggles or with variants and rules to support
 
 Variants are options for flags. For example, if you have a flag `colorscheme` that determines which main colors your users see when they log in to your application, then possible variants could be include `blue`, `green` or `red`.
 
+Variants can also have JSON attachments as of [v1.6.1](https://github.com/markphelps/flipt/releases/tag/v1.6.1).
+
 {{< figure src="/img/concepts/01_variants.png" alt="Variant Example" >}}
 
 {{< hint warning >}}

@@ -39,7 +39,7 @@ If you don't use mounted volumes to persist your data, your data will be lost wh
 After starting the container you can visit [http://0.0.0.0:8080](http://0.0.0.0:8080) to view the application.
 
 {{< hint info >}}
-Flipt runs without root in the Docker container as of [v1.6.1](https://github.com/markphelps/flipt/releases/tag/v1.6.1) 
+Flipt runs without root in the Docker container as of [v1.6.1](https://github.com/markphelps/flipt/releases/tag/v1.6.1).
 {{< /hint >}}
 
 ## Download from GitHub
