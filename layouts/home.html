@@ -1,118 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
     <title>Flipt - An open-source, on-prem feature flag solution</title>
-    <meta name="description" content="Run experiments across services in your environment.">
-    <meta name="image" content="https://flipt.io/img/banner.png">
-    <meta itemprop="name" content="Flipt - An open-source, on-prem feature flag solution">
-    <meta itemprop="description" content="Run experiments across services in your environment.">
-    <meta itemprop="image" content="https://flipt.io/img/banner_og.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Flipt - An open-source, on-prem feature flag solution">
-    <meta name="twitter:description" content="Run experiments across services in your environment.">
-    <meta name="twitter:creator" content="Flipt">
-    <meta name="twitter:image:src" content="https://flipt.io/img/banner_og.png">
-    <meta name="og:title" content="Flipt - An open-source, on-prem feature flag solution">
-    <meta name="og:description" content="Run experiments across services in your environment.">
-    <meta name="og:image" content="https://flipt.io/img/banner_og.png">
-    <meta name="og:url" content="https://flipt.io">
-    <meta name="og:site_name" content="Flipt - An open-source, on-prem feature flag solution">
-    <meta name="og:type" content="website">
-    <meta name="viewport" content="width=device-width">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta
+      name="description"
+      content="Run experiments across services in your environment."
+    />
+    <meta name="image" content="https://flipt.io/img/banner.png" />
+    <meta
+      itemprop="name"
+      content="Flipt - An open-source, on-prem feature flag solution"
+    />
+    <meta
+      itemprop="description"
+      content="Run experiments across services in your environment."
+    />
+    <meta itemprop="image" content="https://flipt.io/img/banner_og.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Flipt - An open-source, on-prem feature flag solution"
+    />
+    <meta
+      name="twitter:description"
+      content="Run experiments across services in your environment."
+    />
+    <meta name="twitter:creator" content="Flipt" />
+    <meta
+      name="twitter:image:src"
+      content="https://flipt.io/img/banner_og.png"
+    />
+    <meta
+      name="og:title"
+      content="Flipt - An open-source, on-prem feature flag solution"
+    />
+    <meta
+      name="og:description"
+      content="Run experiments across services in your environment."
+    />
+    <meta name="og:image" content="https://flipt.io/img/banner_og.png" />
+    <meta name="og:url" content="https://flipt.io" />
+    <meta
+      name="og:site_name"
+      content="Flipt - An open-source, on-prem feature flag solution"
+    />
+    <meta name="og:type" content="website" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400"
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <!-- Global site tag (gtag.js) - Google Ads: 963579150 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-963579150"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-963579150"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-963579150');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-963579150");
     </script>
     <!-- Event snippet for Website traffic conversion page -->
     <script>
-      gtag('event', 'conversion', {'send_to': 'AW-963579150/FL8XCMD4s-8BEI6avMsD'});
+      gtag("event", "conversion", {
+        send_to: "AW-963579150/FL8XCMD4s-8BEI6avMsD",
+      });
     </script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "https://www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-      ga('create', 'UA-44979762-7', 'auto');
-      ga('send', 'pageview');
+      ga("create", "UA-44979762-7", "auto");
+      ga("send", "pageview");
     </script>
     <!-- Hotjar Tracking Code for https://flipt.io -->
     <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:2631016,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2631016, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
   </head>
   <body>
     <header>
       <aside>
-        <a id="github" title="View on GitHub" href="https://github.com/markphelps/flipt"><i class="fa fa-github fa-2x"></i></a>
+        <a
+          id="github"
+          title="View on GitHub"
+          href="https://github.com/markphelps/flipt"
+          ><i class="fa fa-github fa-2x"></i
+        ></a>
       </aside>
       <div id="title">
         <div id="logo">
-          <img src="/img/logo_white.svg" alt="Flipt Logo" title="flipt" width="75px">
+          <img
+            src="/img/logo_white.svg"
+            alt="Flipt Logo"
+            title="Flipt Logo"
+            width="75px"
+          />
           <h1>Flipt</h1>
         </div>
         <h2>An open-source, on-prem feature flag solution</h2>
       </div>
       <div id="banner">
-        <img src="/img/banner.png" alt="Flipt Banner" width="960px"/>
+        <img src="/img/banner.png" alt="Flipt Banner" width="960px" />
       </div>
     </header>
     <main>
       <nav>
-        <a href="/docs/getting_started" onclick="ga('send', 'event', 'nav', 'click', 'docs', 1);">Documentation</a>
-        <a href="/docs/installation" class="cta" onclick="ga('send', 'event', 'cta', 'click', 'try-it-now', 1);">Try It Now!</a>
-        <a href="#enterprise" class="cta-enterprise" onclick="ga('send', 'event', 'nav', 'click', 'enterprise', 1);">For Enterprise</a>
+        <a
+          href="/docs/getting_started"
+          onclick="ga('send', 'event', 'nav', 'click', 'docs', 1);"
+          >Documentation</a
+        >
+        <a
+          href="/docs/installation"
+          class="cta"
+          onclick="ga('send', 'event', 'cta', 'click', 'try-it-now', 1);"
+          >Try It Now!</a
+        >
+        <a
+          href="#enterprise"
+          class="cta-enterprise"
+          onclick="ga('send', 'event', 'nav', 'click', 'enterprise', 1);"
+          >For Enterprise</a
+        >
       </nav>
       <div id="features">
         <section>
           <i class="fa fa-flask fa-2x"></i>
           <h3>Experiment</h3>
-          <p>Use simple on/off flags to toggle functionality in your applications, allowing you to rollout features over time.</p>
+          <p>
+            Use simple on/off flags to toggle functionality in your
+            applications, allowing you to rollout features over time.
+          </p>
         </section>
         <section>
           <i class="fa fa-bullseye fa-2x"></i>
           <h3>User Targeting</h3>
-          <p>Create advanced distribution rules to target specific segments of users based on custom properties that you define.</p>
+          <p>
+            Create advanced distribution rules to target specific segments of
+            users based on custom properties that you define.
+          </p>
         </section>
         <section>
           <i class="fa fa-building-o fa-2x"></i>
           <h3>On-Prem</h3>
-          <p>Flipt can be deployed within your existing infrastructure so that you don't have to worry about your information being sent to a third party.</p>
+          <p>
+            Flipt can be deployed within your existing infrastructure so that
+            you don't have to worry about your information being sent to a third
+            party.
+          </p>
         </section>
         <section>
           <i class="fa fa-lock fa-2x"></i>
           <h3>Secure</h3>
-          <p>HTTPS Support. No data leaves your servers and you don't have to open your systems to the outside world.</p>
+          <p>
+            HTTPS Support. No data leaves your servers and you don't have to
+            open your systems to the outside world.
+          </p>
         </section>
         <section>
           <i class="fa fa-tachometer fa-2x"></i>
           <h3>Fast</h3>
-          <p>Optimized for performance. Since Flipt is co-located with your existing services, there's no excessive latency to slow down your applications.</p>
+          <p>
+            Optimized for performance. Since Flipt is co-located with your
+            existing services, there's no excessive latency to slow down your
+            applications.
+          </p>
         </section>
         <section>
           <i class="fa fa-code fa-2x"></i>
           <h3>Easy Integration</h3>
-          <p>Intuitive <a href="/docs/api">REST API</a>. Native GRPC client SDKs available in Go, Ruby, Java, Python and many more.</p>
+          <p>
+            Intuitive <a href="/docs/api">REST API</a>. Native GRPC client SDKs
+            available in Go, Ruby, Java, Python and many more.
+          </p>
         </section>
       </div>
       <div id="enterprise">
@@ -124,34 +241,590 @@
           </section>
           <section>
             <i class="fa fa-check"></i>
-            <h3>Hosted SaaS</h3>
-          </section>
-          <section>
-            <i class="fa fa-check"></i>
             <h3>User Management</h3>
           </section>
           <section>
             <i class="fa fa-check"></i>
-            <h3>Multiple Environments</h3>
+            <h3>Role Based Access Control</h3>
           </section>
           <section>
             <i class="fa fa-check"></i>
-            <h3>Streaming Updates</h3>
+            <h3>Custom Environments</h3>
           </section>
           <section>
             <i class="fa fa-check"></i>
-            <h3>Audit Trail</h3>
+            <h3>3rd Party Integrations</h3>
+          </section>
+          <section>
+            <i class="fa fa-check"></i>
+            <h3>Audit Logs</h3>
           </section>
         </div>
         <div id="enterprise-signup">
           <h2>Learn About Flipt for Enterprise</h2>
           <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-          <form action="https://app.convertkit.com/forms/1170801/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="1170801" data-uid="f6ee4ed85e" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Thanks! We'll be in touch soon.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:false,&quot;url&quot;:&quot;https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" aria-label="First Name" name="fields[first_name]" placeholder="First Name" type="text" style="color: rgb(51, 51, 51); border-color: rgb(238, 231, 251); border-radius: 4px; font-weight: 400;"></div><div class="formkit-field"><input class="formkit-input" name="email_address" placeholder="Email" required="" type="email" style="color: rgb(51, 51, 51); border-color: rgb(238, 231, 251); border-radius: 4px; font-weight: 400;"></div><button onclick="ga('send', 'event', 'cta', 'submit', 'enterprise-email', 1);" data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(168, 41, 186); border-radius: 4px; font-weight: 700;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span>Let's Chat</span></button></div></div><style>.formkit-form[data-uid="f6ee4ed85e"] *{box-sizing:border-box;}.formkit-form[data-uid="f6ee4ed85e"]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.formkit-form[data-uid="f6ee4ed85e"] legend{border:none;font-size:inherit;margin-bottom:10px;padding:0;position:relative;display:table;}.formkit-form[data-uid="f6ee4ed85e"] fieldset{border:0;padding:0.01em 0 0 0;margin:0;min-width:0;}.formkit-form[data-uid="f6ee4ed85e"] body:not(:-moz-handler-blocked) fieldset{display:table-cell;}.formkit-form[data-uid="f6ee4ed85e"] h1,.formkit-form[data-uid="f6ee4ed85e"] h2,.formkit-form[data-uid="f6ee4ed85e"] h3,.formkit-form[data-uid="f6ee4ed85e"] h4,.formkit-form[data-uid="f6ee4ed85e"] h5,.formkit-form[data-uid="f6ee4ed85e"] h6{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="f6ee4ed85e"] p{color:inherit;font-size:inherit;font-weight:inherit;}.formkit-form[data-uid="f6ee4ed85e"] ol:not([template-default]),.formkit-form[data-uid="f6ee4ed85e"] ul:not([template-default]),.formkit-form[data-uid="f6ee4ed85e"] blockquote:not([template-default]){text-align:left;}.formkit-form[data-uid="f6ee4ed85e"] p:not([template-default]),.formkit-form[data-uid="f6ee4ed85e"] hr:not([template-default]),.formkit-form[data-uid="f6ee4ed85e"] blockquote:not([template-default]),.formkit-form[data-uid="f6ee4ed85e"] ol:not([template-default]),.formkit-form[data-uid="f6ee4ed85e"] ul:not([template-default]){color:inherit;font-style:initial;}.formkit-form[data-uid="f6ee4ed85e"][data-format="modal"]{display:none;}.formkit-form[data-uid="f6ee4ed85e"][data-format="slide in"]{display:none;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input,.formkit-form[data-uid="f6ee4ed85e"] .formkit-select,.formkit-form[data-uid="f6ee4ed85e"] .formkit-checkboxes{width:100%;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-button,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit{border:0;border-radius:5px;color:#ffffff;cursor:pointer;display:inline-block;text-align:center;font-size:15px;font-weight:500;cursor:pointer;margin-bottom:15px;overflow:hidden;padding:0;position:relative;vertical-align:middle;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-button:hover,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:hover,.formkit-form[data-uid="f6ee4ed85e"] .formkit-button:focus,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:focus{outline:none;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-button:hover > span,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:hover > span,.formkit-form[data-uid="f6ee4ed85e"] .formkit-button:focus > span,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:focus > span{background-color:rgba(0,0,0,0.1);}.formkit-form[data-uid="f6ee4ed85e"] .formkit-button > span,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit > span{display:block;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;padding:12px 24px;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input{background:#ffffff;font-size:15px;padding:12px;border:1px solid #e3e3e3;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;line-height:1.4;margin:0;-webkit-transition:border-color ease-out 300ms;transition:border-color ease-out 300ms;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input:focus{outline:none;border-color:#1677be;-webkit-transition:border-color ease 300ms;transition:border-color ease 300ms;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input::-webkit-input-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input::-moz-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input:-ms-input-placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-input::placeholder{color:inherit;opacity:0.8;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="dropdown"]{position:relative;display:inline-block;width:100%;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="dropdown"]::before{content:"";top:calc(50% - 2.5px);right:10px;position:absolute;pointer-events:none;border-color:#4f4f4f transparent transparent transparent;border-style:solid;border-width:6px 6px 0 6px;height:0;width:0;z-index:999;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="dropdown"] select{height:auto;width:100%;cursor:pointer;color:#333333;line-height:1.4;margin-bottom:0;padding:0 6px;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:15px;padding:12px;padding-right:25px;border:1px solid #e3e3e3;background:#ffffff;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="dropdown"] select:focus{outline:none;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"]{text-align:left;margin:0;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"]{margin-bottom:10px;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] *{cursor:pointer;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"]:last-of-type{margin-bottom:0;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]{display:none;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"] + label::after{content:none;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::after{border-color:#ffffff;content:"";}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] input[type="checkbox"]:checked + label::before{background:#10bf7a;border-color:#10bf7a;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] label{position:relative;display:inline-block;padding-left:28px;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] label::before,.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] label::after{position:absolute;content:"";display:inline-block;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] label::before{height:16px;width:16px;border:1px solid #e3e3e3;background:#ffffff;left:0px;top:3px;}.formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] [data-group="checkbox"] label::after{height:4px;width:8px;border-left:2px solid #4d4d4d;border-bottom:2px solid #4d4d4d;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);left:4px;top:8px;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-alert{background:#f9fafb;border:1px solid #e3e3e3;border-radius:5px;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;list-style:none;margin:25px auto;padding:12px;text-align:center;width:100%;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-alert:empty{display:none;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-alert-success{background:#d3fbeb;border-color:#10bf7a;color:#0c905c;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-alert-error{background:#fde8e2;border-color:#f2643b;color:#ea4110;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-spinner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;height:0px;width:0px;margin:0 auto;position:absolute;top:0;left:0;right:0;width:0px;overflow:hidden;text-align:center;-webkit-transition:all 300ms ease-in-out;transition:all 300ms ease-in-out;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-spinner > div{margin:auto;width:12px;height:12px;background-color:#fff;opacity:0.3;border-radius:100%;display:inline-block;-webkit-animation:formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e- 1.4s infinite ease-in-out both;animation:formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e- 1.4s infinite ease-in-out both;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-spinner > div:nth-child(1){-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-spinner > div:nth-child(2){-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit[data-active] .formkit-spinner{opacity:1;height:100%;width:50px;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit[data-active] .formkit-spinner ~ span{opacity:0;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-powered-by[data-active="false"]{opacity:0.35;}@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e-{0%,80%,100%{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}@keyframes formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e-{0%,80%,100%{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}}.formkit-form[data-uid="f6ee4ed85e"] blockquote{padding:10px 20px;margin:0 0 20px;border-left:5px solid #e1e1e1;} .formkit-form[data-uid="f6ee4ed85e"]{max-width:700px;}.formkit-form[data-uid="f6ee4ed85e"] [data-style="clean"]{width:100%;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-fields{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 auto;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-field,.formkit-form[data-uid="f6ee4ed85e"] .formkit-submit{margin:0 0 15px 0;-webkit-flex:1 0 100%;-ms-flex:1 0 100%;flex:1 0 100%;}.formkit-form[data-uid="f6ee4ed85e"] .formkit-powered-by{color:#7d7d7d;display:block;font-size:12px;margin:0;text-align:center;}.formkit-form[data-uid="f6ee4ed85e"][min-width~="700"] [data-style="clean"],.formkit-form[data-uid="f6ee4ed85e"][min-width~="800"] [data-style="clean"]{padding:10px;}.formkit-form[data-uid="f6ee4ed85e"][min-width~="700"] .formkit-fields[data-stacked="false"],.formkit-form[data-uid="f6ee4ed85e"][min-width~="800"] .formkit-fields[data-stacked="false"]{margin-left:-5px;margin-right:-5px;}.formkit-form[data-uid="f6ee4ed85e"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="f6ee4ed85e"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="f6ee4ed85e"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,.formkit-form[data-uid="f6ee4ed85e"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit{margin:0 5px 15px 5px;}.formkit-form[data-uid="f6ee4ed85e"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-field,.formkit-form[data-uid="f6ee4ed85e"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-field{-webkit-flex:100 1 auto;-ms-flex:100 1 auto;flex:100 1 auto;}.formkit-form[data-uid="f6ee4ed85e"][min-width~="700"] .formkit-fields[data-stacked="false"] .formkit-submit,.formkit-form[data-uid="f6ee4ed85e"][min-width~="800"] .formkit-fields[data-stacked="false"] .formkit-submit{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;}</style></form>
+          <form
+            action="https://app.convertkit.com/forms/1170801/subscriptions"
+            class="seva-form formkit-form"
+            method="post"
+            data-sv-form="1170801"
+            data-uid="f6ee4ed85e"
+            data-format="inline"
+            data-version="5"
+            data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Thanks! We&apos;ll be in touch soon.","redirect_url":""},"analytics":{"google":null,"facebook":null,"segment":null,"pinterest":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://convertkit.com?utm_source=dynamic&amp;utm_medium=referral&amp;utm_campaign=poweredby&amp;utm_content=form"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
+            min-width="400 500 600 700 800"
+          >
+            <div data-style="clean">
+              <ul
+                class="formkit-alert formkit-alert-error"
+                data-element="errors"
+                data-group="alert"
+              ></ul>
+              <div
+                data-element="fields"
+                data-stacked="false"
+                class="seva-fields formkit-fields"
+              >
+                <div class="formkit-field">
+                  <input
+                    class="formkit-input"
+                    aria-label="First Name"
+                    name="fields[first_name]"
+                    placeholder="First Name"
+                    type="text"
+                    style="
+                      color: rgb(51, 51, 51);
+                      border-color: rgb(238, 231, 251);
+                      border-radius: 4px;
+                      font-weight: 400;
+                    "
+                  />
+                </div>
+                <div class="formkit-field">
+                  <input
+                    class="formkit-input"
+                    name="email_address"
+                    placeholder="Email"
+                    required=""
+                    type="email"
+                    style="
+                      color: rgb(51, 51, 51);
+                      border-color: rgb(238, 231, 251);
+                      border-radius: 4px;
+                      font-weight: 400;
+                    "
+                  />
+                </div>
+                <button
+                  onclick="ga('send', 'event', 'cta', 'submit', 'enterprise-email', 1);"
+                  data-element="submit"
+                  class="formkit-submit formkit-submit"
+                  style="
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(168, 41, 186);
+                    border-radius: 4px;
+                    font-weight: 700;
+                  "
+                >
+                  <div class="formkit-spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <span>Let's Chat</span>
+                </button>
+              </div>
+            </div>
+            <style>
+              .formkit-form[data-uid="f6ee4ed85e"] * {
+                box-sizing: border-box;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] legend {
+                border: none;
+                font-size: inherit;
+                margin-bottom: 10px;
+                padding: 0;
+                position: relative;
+                display: table;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] fieldset {
+                border: 0;
+                padding: 0.01em 0 0 0;
+                margin: 0;
+                min-width: 0;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                body:not(:-moz-handler-blocked)
+                fieldset {
+                display: table-cell;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] h1,
+              .formkit-form[data-uid="f6ee4ed85e"] h2,
+              .formkit-form[data-uid="f6ee4ed85e"] h3,
+              .formkit-form[data-uid="f6ee4ed85e"] h4,
+              .formkit-form[data-uid="f6ee4ed85e"] h5,
+              .formkit-form[data-uid="f6ee4ed85e"] h6 {
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] p {
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] ol:not([template-default]),
+              .formkit-form[data-uid="f6ee4ed85e"] ul:not([template-default]),
+              .formkit-form[data-uid="f6ee4ed85e"]
+                blockquote:not([template-default]) {
+                text-align: left;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] p:not([template-default]),
+              .formkit-form[data-uid="f6ee4ed85e"] hr:not([template-default]),
+              .formkit-form[data-uid="f6ee4ed85e"]
+                blockquote:not([template-default]),
+              .formkit-form[data-uid="f6ee4ed85e"] ol:not([template-default]),
+              .formkit-form[data-uid="f6ee4ed85e"] ul:not([template-default]) {
+                color: inherit;
+                font-style: initial;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][data-format="modal"] {
+                display: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][data-format="slide in"] {
+                display: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-input,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-select,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-checkboxes {
+                width: 100%;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-button,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-submit {
+                border: 0;
+                border-radius: 5px;
+                color: #ffffff;
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 500;
+                cursor: pointer;
+                margin-bottom: 15px;
+                overflow: hidden;
+                padding: 0;
+                position: relative;
+                vertical-align: middle;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-button:hover,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:hover,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-button:focus,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:focus {
+                outline: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-button:hover > span,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-submit:hover > span,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-button:focus > span,
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-submit:focus
+                > span {
+                background-color: rgba(0, 0, 0, 0.1);
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-button > span,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-submit > span {
+                display: block;
+                -webkit-transition: all 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+                padding: 12px 24px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-input {
+                background: #ffffff;
+                font-size: 15px;
+                padding: 12px;
+                border: 1px solid #e3e3e3;
+                -webkit-flex: 1 0 auto;
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+                line-height: 1.4;
+                margin: 0;
+                -webkit-transition: border-color ease-out 300ms;
+                transition: border-color ease-out 300ms;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-input:focus {
+                outline: none;
+                border-color: #1677be;
+                -webkit-transition: border-color ease 300ms;
+                transition: border-color ease 300ms;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-input::-webkit-input-placeholder {
+                color: inherit;
+                opacity: 0.8;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-input::-moz-placeholder {
+                color: inherit;
+                opacity: 0.8;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-input:-ms-input-placeholder {
+                color: inherit;
+                opacity: 0.8;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-input::placeholder {
+                color: inherit;
+                opacity: 0.8;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] [data-group="dropdown"] {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="dropdown"]::before {
+                content: "";
+                top: calc(50% - 2.5px);
+                right: 10px;
+                position: absolute;
+                pointer-events: none;
+                border-color: #4f4f4f transparent transparent transparent;
+                border-style: solid;
+                border-width: 6px 6px 0 6px;
+                height: 0;
+                width: 0;
+                z-index: 999;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="dropdown"]
+                select {
+                height: auto;
+                width: 100%;
+                cursor: pointer;
+                color: #333333;
+                line-height: 1.4;
+                margin-bottom: 0;
+                padding: 0 6px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                font-size: 15px;
+                padding: 12px;
+                padding-right: 25px;
+                border: 1px solid #e3e3e3;
+                background: #ffffff;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="dropdown"]
+                select:focus {
+                outline: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] [data-group="checkboxes"] {
+                text-align: left;
+                margin: 0;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"] {
+                margin-bottom: 10px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                * {
+                cursor: pointer;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]:last-of-type {
+                margin-bottom: 0;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                input[type="checkbox"] {
+                display: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                input[type="checkbox"]
+                + label::after {
+                content: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                input[type="checkbox"]:checked
+                + label::after {
+                border-color: #ffffff;
+                content: "";
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                input[type="checkbox"]:checked
+                + label::before {
+                background: #10bf7a;
+                border-color: #10bf7a;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                label {
+                position: relative;
+                display: inline-block;
+                padding-left: 28px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                label::before,
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                label::after {
+                position: absolute;
+                content: "";
+                display: inline-block;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                label::before {
+                height: 16px;
+                width: 16px;
+                border: 1px solid #e3e3e3;
+                background: #ffffff;
+                left: 0px;
+                top: 3px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                [data-group="checkboxes"]
+                [data-group="checkbox"]
+                label::after {
+                height: 4px;
+                width: 8px;
+                border-left: 2px solid #4d4d4d;
+                border-bottom: 2px solid #4d4d4d;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                left: 4px;
+                top: 8px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-alert {
+                background: #f9fafb;
+                border: 1px solid #e3e3e3;
+                border-radius: 5px;
+                -webkit-flex: 1 0 auto;
+                -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+                list-style: none;
+                margin: 25px auto;
+                padding: 12px;
+                text-align: center;
+                width: 100%;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-alert:empty {
+                display: none;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-alert-success {
+                background: #d3fbeb;
+                border-color: #10bf7a;
+                color: #0c905c;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-alert-error {
+                background: #fde8e2;
+                border-color: #f2643b;
+                color: #ea4110;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-spinner {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                height: 0px;
+                width: 0px;
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 0px;
+                overflow: hidden;
+                text-align: center;
+                -webkit-transition: all 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-spinner > div {
+                margin: auto;
+                width: 12px;
+                height: 12px;
+                background-color: #fff;
+                opacity: 0.3;
+                border-radius: 100%;
+                display: inline-block;
+                -webkit-animation: formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e-
+                  1.4s infinite ease-in-out both;
+                animation: formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e-
+                  1.4s infinite ease-in-out both;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-spinner
+                > div:nth-child(1) {
+                -webkit-animation-delay: -0.32s;
+                animation-delay: -0.32s;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-spinner
+                > div:nth-child(2) {
+                -webkit-animation-delay: -0.16s;
+                animation-delay: -0.16s;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-submit[data-active]
+                .formkit-spinner {
+                opacity: 1;
+                height: 100%;
+                width: 50px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-submit[data-active]
+                .formkit-spinner
+                ~ span {
+                opacity: 0;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"]
+                .formkit-powered-by[data-active="false"] {
+                opacity: 0.35;
+              }
+              @-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e- {
+                0%,
+                80%,
+                100% {
+                  -webkit-transform: scale(0);
+                  -ms-transform: scale(0);
+                  transform: scale(0);
+                }
+                40% {
+                  -webkit-transform: scale(1);
+                  -ms-transform: scale(1);
+                  transform: scale(1);
+                }
+              }
+              @keyframes formkit-bouncedelay-formkit-form-data-uid-f6ee4ed85e- {
+                0%,
+                80%,
+                100% {
+                  -webkit-transform: scale(0);
+                  -ms-transform: scale(0);
+                  transform: scale(0);
+                }
+                40% {
+                  -webkit-transform: scale(1);
+                  -ms-transform: scale(1);
+                  transform: scale(1);
+                }
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] blockquote {
+                padding: 10px 20px;
+                margin: 0 0 20px;
+                border-left: 5px solid #e1e1e1;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] {
+                max-width: 700px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] [data-style="clean"] {
+                width: 100%;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-fields {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                margin: 0 auto;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-field,
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-submit {
+                margin: 0 0 15px 0;
+                -webkit-flex: 1 0 100%;
+                -ms-flex: 1 0 100%;
+                flex: 1 0 100%;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"] .formkit-powered-by {
+                color: #7d7d7d;
+                display: block;
+                font-size: 12px;
+                margin: 0;
+                text-align: center;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="700"]
+                [data-style="clean"],
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="800"]
+                [data-style="clean"] {
+                padding: 10px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="700"]
+                .formkit-fields[data-stacked="false"],
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="800"]
+                .formkit-fields[data-stacked="false"] {
+                margin-left: -5px;
+                margin-right: -5px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="700"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-field,
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="800"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-field,
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="700"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-submit,
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="800"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-submit {
+                margin: 0 5px 15px 5px;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="700"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-field,
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="800"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-field {
+                -webkit-flex: 100 1 auto;
+                -ms-flex: 100 1 auto;
+                flex: 100 1 auto;
+              }
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="700"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-submit,
+              .formkit-form[data-uid="f6ee4ed85e"][min-width~="800"]
+                .formkit-fields[data-stacked="false"]
+                .formkit-submit {
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+              }
+            </style>
+          </form>
         </div>
       </div>
-      </main>
+    </main>
     <footer>
-      Flipt is made with&nbsp;<i id="heart" class="fa fa-heart"></i>&nbsp;by <a rel="author" href="https://markphelps.me">Mark Phelps</a> and <a href="https://github.com/markphelps/flipt/graphs/contributors" title="Contributors">many other fabulous people</a>.
+      Flipt is made with&nbsp;<i id="heart" class="fa fa-heart"></i>&nbsp;by
+      <a rel="author" href="https://markphelps.me">Mark Phelps</a> and
+      <a
+        href="https://github.com/markphelps/flipt/graphs/contributors"
+        title="Contributors"
+        >many other fabulous people</a
+      >.
     </footer>
   </body>
 </html>
