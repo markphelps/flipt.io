@@ -8,11 +8,14 @@ Feature flagging can be used to switch features on and off. This can be done by 
 
 Once you have a flag created, you can control whether or not a feature is enabled within your application by toggling the `enable` slider in the Flipt UI.
 
-{{< figure src="/img/use_cases/flag_enable_slider.png" alt="Flag Enable Slider" >}}
+<a href="../../img/use_cases/flag_enable_slider.png" class="spotlight">
+    <img src="../../img/use_cases/flag_enable_slider.png" alt="Flag Enable Slider" />
+</a>
 
 An example request to evaluate whether or not this flag is enabled would look like this:
 
-*Language: Go*
+_Language: Go_
+
 ```go
 res, err := client.GetFlag(context.Background(), &flipt.GetFlagRequest{
 	Key: "test-flag",
@@ -33,11 +36,14 @@ A/B testing can be accomplished by setting up a percentage rollout rule in Flipt
 
 In this example rule, we have two variants that we are targeting, `group-a` and `group-b`, each with a 50% distribution.
 
-{{< figure src="/img/use_cases/flag_targeting_rollout.png" alt="Flag Targeting" >}}
+<a href="../../img/use_cases/flag_targeting_rollout.png" class="spotlight">
+    <img src="../../img/use_cases/flag_targeting_rollout.png" alt="Flag Targeting" />
+</a>
 
 An example request to evaluate this rule within your application would look like this:
 
-*Language: Go*
+_Language: Go_
+
 ```go
 res, err := client.Evaluate(context.Background(), &flipt.EvaluationRequest{
 	FlagKey:  "new-landing-page",

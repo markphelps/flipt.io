@@ -28,7 +28,9 @@ To create a flag:
 1. Click `Enabled` so the flag will be enabled once created.
 1. Click `Create`.
 
-{{< figure src="/img/getting_started/00_create_flag.png" alt="Create Flag" >}}
+<a href="../../img/getting_started/00_create_flag.png" class="spotlight">
+    <img src="../../img/getting_started/00_create_flag.png" alt="Create Flag" />
+</a>
 
 You should see the message `Flag created!`.
 
@@ -43,7 +45,9 @@ To create a variant:
 1. Click `Add Variant`.
 1. Create one more variant populating the information as you wish.
 
-{{< figure src="/img/getting_started/01_create_variant.png" alt="Create Variant" >}}
+<a href="../../img/getting_started/01_create_variant.png" class="spotlight">
+    <img src="../../img/getting_started/01_create_variant.png" alt="Create Variant" />
+</a>
 
 You should see the message `Variant added!`.
 
@@ -64,7 +68,9 @@ To create a segment:
 1. Populate the details of the segment as shown.
 1. Click `Create`.
 
-{{< figure src="/img/getting_started/02_create_segment.png" alt="Create Segment" >}}
+<a href="../../img/getting_started/02_create_segment.png" class="spotlight">
+    <img src="../../img/getting_started/02_create_segment.png" alt="Create Segment" />
+</a>
 
 You should see the message `Segment created!`.
 
@@ -82,7 +88,9 @@ To create a constraint:
 1. Populate the details of the constraint as shown.
 1. Click `Add Constraint`.
 
-{{< figure src="/img/getting_started/03_create_constraint.png" alt="Create Constraint" >}}
+<a href="../../img/getting_started/03_create_constraint.png" class="spotlight">
+    <img src="../../img/getting_started/03_create_constraint.png" alt="Create Constraint" />
+</a>
 
 You should see the message `Constraint added!`.
 
@@ -102,7 +110,9 @@ To create a rule and distribution:
 1. You should see your two variants that you created earlier, with a percentage of 50% each next to them.
 1. Click `Add Rule`.
 
-{{< figure src="/img/getting_started/04_create_rule.png" alt="Create Rule" >}}
+<a href="../../img/getting_started/04_create_rule.png" class="spotlight">
+    <img src="../../img/getting_started/04_create_rule.png" alt="Create Rule" />
+</a>
 
 You should see the message `Rule added!`. You just created your first rule and distribution.
 
@@ -132,7 +142,9 @@ To test evaluation:
 1. Note the `Response` pane to the right has been populated with the evaluation response from the server, informing you that this request would match your segment that you created earlier, and return one of the variants defined.
 1. Experiment with different values for the `context` and `entityId` fields.
 
-{{< figure src="/img/getting_started/05_debug_console.png" alt="Debug Console" >}}
+<a href="../../img/getting_started/05_debug_console.png" class="spotlight">
+    <img src="../../img/getting_started/05_debug_console.png" alt="Debug Console" />
+</a>
 
 {{< hint info >}}
 You can click `Reset` to populate a new example request in the `Request` pane. This will also generate a fresh UUID for the `entityId` field.
