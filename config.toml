@@ -22,3 +22,6 @@ disableKinds = ['taxonomy', 'taxonomyTerm']
   # Path must point to 'content' directory of repo.
   BookEditPath = 'edit/main'
   BookToC = 1
+
+[markup.goldmark.renderer]
+unsafe= true

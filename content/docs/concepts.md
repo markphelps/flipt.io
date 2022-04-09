@@ -10,7 +10,9 @@ For example, a flag named `new-contact-page`, could be used to determine whether
 
 Flags can be used as simple on/off toggles or with variants and rules to support more elaborate use cases.
 
-{{< figure src="/img/concepts/00_flags.png" alt="Flags Example" >}}
+<a href="../../img/concepts/00_flags.png" class="spotlight">
+    <img src="../../img/concepts/00_flags.png" alt="Flags Example" />
+</a>
 
 ## Variants
 
@@ -18,7 +20,9 @@ Variants are options for flags. For example, if you have a flag `colorscheme` th
 
 Variants can also have JSON attachments as of [v1.6.1](https://github.com/markphelps/flipt/releases/tag/v1.6.1).
 
-{{< figure src="/img/concepts/01_variants.png" alt="Variant Example" >}}
+<a href="../../img/concepts/01_variants.png" class="spotlight">
+    <img src="../../img/concepts/01_variants.png" alt="Variants Example" />
+</a>
 
 {{< hint warning >}}
 Variant keys must be unique for a given flag.
@@ -30,7 +34,9 @@ Segments allow you to split your user base or audience up into predefined slices
 
 An example segment could be `new-users`.
 
-{{< figure src="/img/concepts/02_segments.png" alt="Segments Example" >}}
+<a href="../../img/concepts/02_segments.png" class="spotlight">
+    <img src="../../img/concepts/02_segments.png" alt="Segments Example" />
+</a>
 
 {{< hint info >}}
 Segments are global across the Flipt application so they can be used in multiple rules.
@@ -52,9 +58,11 @@ Constraints allow you to determine which segment a given entity is a part of.
 
 For example, for a user to fall into the above `new-users` segment, you may want to check their `finished_onboarding` property.
 
-{{< figure src="/img/concepts/03_constraints.png" alt="Constraints Example" >}}
+<a href="../../img/concepts/03_constraints.png" class="spotlight">
+    <img src="../../img/concepts/03_constraints.png" alt="Constraints Example" />
+</a>
 
-All constraints have a *property*, *type*, *operator* and optionally a *value*.
+All constraints have a _property_, _type_, _operator_ and optionally a _value_.
 
 <dl>
 <dt><strong>property</strong></dt>
@@ -75,7 +83,9 @@ Rules can be as simple as `IF IN segment THEN RETURN variant_a` or they can be m
 
 Continuing our previous example, we may want to return the flag variant `blue` for all entities in the `new-users` segment. This would be configured like so:
 
-{{< figure src="/img/concepts/04_rules.png" alt="Rules Example" >}}
+<a href="../../img/concepts/04_rules.png" class="spotlight">
+    <img src="../../img/concepts/04_rules.png" alt="Rules Example" />
+</a>
 
 {{< hint warning >}}
 Rules are evaluated in order per their rank from 1-N. The first rule that matches wins. Once created, rules can be re-ordered to change how they are evaluated.
@@ -87,7 +97,9 @@ Distributions allow you to rollout different variants of your flag to percentage
 
 Let's say that instead of always showing the `blue` variant to your `new-users` segment, you want to show blue to 30% of `new-users`, `red` to 10%, and `green` to the remaining 60%. You would accomplish this using rules with distributions:
 
-{{< figure src="/img/concepts/05_distributions.png" alt="Distributions Example" >}}
+<a href="../../img/concepts/05_distributions.png" class="spotlight">
+    <img src="../../img/concepts/05_distributions.png" alt="Distributions Example" />
+</a>
 
 This is an extremely powerful feature of Flipt that can help you seamlessly deploy new features of your applications to your users while also limiting reach of potential bugs.
 
@@ -110,11 +122,11 @@ For Flipt to successfully determine which _bucket_ your entities fall into, it m
 
 It could be a:
 
-* email address
-* userID
-* ip address
-* physical address
-* etc
+- email address
+- userID
+- ip address
+- physical address
+- etc
 
 Anything that is unique enough for your application and it's requirements.
 
@@ -129,10 +141,10 @@ The final piece of the puzzle is context. Context allows Flipt to determine whic
 
 Examples of context could include:
 
-* isAdmin
-* favoriteColor
-* country
-* freeUser
+- isAdmin
+- favoriteColor
+- country
+- freeUser
 
 Think of these as pieces of information that are usually not unique, but that can be used to split your entities into your segments.
 

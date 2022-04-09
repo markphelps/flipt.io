@@ -15,16 +15,16 @@ Since Flipt is a [GRPC](https://grpc.io/) enabled application, you can use a gen
 
 This means that your application can use the Flipt GRPC client if it is written in one of the many languages that GRPC supports, including:
 
-* C++
-* Java
-* Python
-* Go
-* Ruby
-* C#
-* Node.js
-* Android Java
-* Objective-C
-* PHP
+- C++
+- Java
+- Python
+- Go
+- Ruby
+- C#
+- Node.js
+- Android Java
+- Objective-C
+- PHP
 
 The Flipt GRPC client is the preferred way to integrate your application with Flipt as it is more performant than REST and requires the least amount of configuration.
 
@@ -34,8 +34,8 @@ An example Go application exists at [https://github.com/markphelps/flipt/example
 
 Prebuilt Flipt GRPC clients are currently available for the following languages:
 
-* Go: [https://github.com/markphelps/flipt-grpc-go](https://github.com/markphelps/flipt-grpc-go)
-* Ruby: [https://github.com/markphelps/flipt-grpc-ruby](https://github.com/markphelps/flipt-grpc-ruby)
+- Go: [https://github.com/markphelps/flipt-grpc-go](https://github.com/markphelps/flipt-grpc-go)
+- Ruby: [https://github.com/markphelps/flipt-grpc-ruby](https://github.com/markphelps/flipt-grpc-ruby)
 
 If your language is not listed, please see the section below on how to generate a native GRPC client manually. If you choose to open source this client, please submit a pull request so I can add it to the docs.
 
@@ -83,11 +83,15 @@ The latest version of the REST API is fully documented using OpenAPI v2 (formerl
 
 Each Flipt server instance also hosts it's own REST API documentation. This documentation is reachable in the Flipt UI by clicking the **API** link in the header navigation.
 
-{{< figure src="/img/integration/api.png" alt="Flipt API" >}}
+<a href="../../img/integration/api.png" class="spotlight">
+    <img src="../../img/integration/api.png" alt="Flipt API" />
+</a>
 
 This will load the API documentation which documents valid requests/responses to the Flipt REST API:
 
-{{< figure src="/img/integration/docs.png" alt="Flipt API Docs" >}}
+<a href="../../img/integration/docs.png" class="spotlight">
+    <img src="../../img/integration/docs.png" alt="Flipt API Docs" />
+</a>
 
 ## REST Clients
 
@@ -110,9 +114,9 @@ swagger-codegen generate -i swagger/api/swagger.json -l java -o /tmp/flipt/java
 
 Client libraries built by awesome people from the Open Source community:
 
-| Library | Language | Author | Desc |
-| --- | --- | --- | --- |
-| [flipt-grpc-python](https://github.com/getsentry/flipt-grpc-python) | Python | [@getsentry](https://github.com/getsentry) | Python GRPC bindings for Flipt |
-| [rflipt](https://github.com/christopherdiehl/rflipt) | React | [@christopherdiehl](https://github.com/christopherdiehl) | Components/example project to control React features backed by Flipt |
-| [flipt-php](https://github.com/fetzi/flipt-php) | PHP | [@fetzi](https://github.com/fetzi) | Package for evaluating feature flags via the Flipt REST API using [HTTPlug](http://httplug.io/) |
-| [flipt-js](https://github.com/betrybe/flipt-js) | Javascript | [@betrybe](https://github.com/betrybe) | Flipt library for JS that allows rendering components based on Feature Flags 🎉 |
+| Library                                                             | Language   | Author                                                   | Desc                                                                                            |
+| ------------------------------------------------------------------- | ---------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [flipt-grpc-python](https://github.com/getsentry/flipt-grpc-python) | Python     | [@getsentry](https://github.com/getsentry)               | Python GRPC bindings for Flipt                                                                  |
+| [rflipt](https://github.com/christopherdiehl/rflipt)                | React      | [@christopherdiehl](https://github.com/christopherdiehl) | Components/example project to control React features backed by Flipt                            |
+| [flipt-php](https://github.com/fetzi/flipt-php)                     | PHP        | [@fetzi](https://github.com/fetzi)                       | Package for evaluating feature flags via the Flipt REST API using [HTTPlug](http://httplug.io/) |
+| [flipt-js](https://github.com/betrybe/flipt-js)                     | Javascript | [@betrybe](https://github.com/betrybe)                   | Flipt library for JS that allows rendering components based on Feature Flags 🎉                 |
