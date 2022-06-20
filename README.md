@@ -4,8 +4,6 @@ This version of the Flipt docs is now archived.
 
 The new docs are available at [https://github.com/flipt-io/docs](https://github.com/flipt-io/docs)
 
-# Flipt.io
-
 [https://flipt.io/](https://flipt.io/)
 
 ## Running Locally
