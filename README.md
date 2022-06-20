@@ -1,6 +1,10 @@
-# Flipt.io
+# Archived - 06/20/22
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/343fb6a4-8706-46bb-b2c2-a736c9f37bcb/deploy-status)](https://app.netlify.com/sites/focused-panini-88d845/deploys)
+This version of the Flipt docs is now archived. 
+
+The new docs are available at [https://github.com/flipt-io/docs](https://github.com/flipt-io/docs)
+
+# Flipt.io
 
 [https://flipt.io/](https://flipt.io/)
 
